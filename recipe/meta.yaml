@@ -15,9 +15,9 @@ build:
 
 requirements:
   build:
-    - cmake
     - {{ compiler('cxx') }}
-    - make  # [unix]
+    - cmake
+    - ninja
 
 test:
   commands:
@@ -27,8 +27,12 @@ test:
 about:
   home: https://github.com/ikalnytskyi/termcolor
   license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE
   summary: 'Header-only C++ library for printing colored messages to the terminal.'
+  dev_url: https://github.com/ikalnytskyi/termcolor
+  doc_url: https://github.com/ikalnytskyi/termcolor#how-to-use
+  doc_src_url: https://github.com/ikalnytskyi/termcolor
 
 extra:
   recipe-maintainers:
