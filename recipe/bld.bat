@@ -6,7 +6,11 @@ cd Build
 if errorlevel 1 exit 1
 
 :: Generate the build files.
-cmake .. -G"Ninja" %CMAKE_ARGS%
+cmake .. -G"Ninja" %CMAKE_ARGS% ^
+      -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
+      -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+      -DCMAKE_BUILD_TYPE=Release
+
 
 :: Build and install.
 ninja install
